@@ -8,6 +8,11 @@
   font-family: "Mulish", sans-serif;
   max-width: 1440px;
 }
+.main-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
 .orange {
   color: #ff5400;
 }
@@ -41,11 +46,7 @@ header {
   align-items: center;
  
 }
-.nav img {
-  width: 44px;
-  height: 44px;
-  margin-right: 5px;
-}
+
 .nav ul {
   display: flex;
   justify-content: center;
@@ -181,11 +182,80 @@ ul {
   border-radius: 16px;
 }
 
+
+
+
+/* footer styles */
+footer {
+    
+    background: rgba(19, 19, 24, 0.05);
+    text-align: center;
+    margin: 0 auto;
+}
+.footer-container{
+    width: 60%;
+    text-align: center;
+    margin:0px auto;
+    padding: 100px;
+    
+}
+.footer-title {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 20%;
+    
+}
+.footer-title h1{
+    font-size: 2rem;
+    margin-left: 6px;
+    margin-bottom: 10px;
+}
+.footer-title p{
+    color: #5A5A5D;
+    font-size: 1rem;
+    width: 700px;
+    
+}
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+.reserved{
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* responsive devices */
 
 /* small devices */
 @media screen and (max-width: 600px) {
-
+    
   header {
     width: 100%;
     margin: 0px;
@@ -257,6 +327,12 @@ ul {
     height: 100%;
   }
 
-
+  .footer-container{
+    padding: 30px 40px;
+    width: 100%;
+  }
+  .footer-title h1{
+    font-size: 1.3rem;
+  }
 
 }
