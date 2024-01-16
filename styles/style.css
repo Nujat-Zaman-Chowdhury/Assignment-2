@@ -31,6 +31,7 @@
   padding: 14px 34px;
   cursor: pointer;
 }
+
 .p-tag {
   color: rgba(19, 19, 24, 0.7);
   font-size: 1rem;
@@ -49,6 +50,10 @@ header {
   padding: 20px;
   margin: 20px 130px;
 }
+.logo{
+  display: flex;
+  align-items: center;
+}
 .nav-icon {
   visibility: hidden;
 }
@@ -56,9 +61,10 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 
-.nav ul {
+.nav> ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,7 +157,7 @@ select:focus {
 main section {
   width: 80%;
   /* height: 500px; */
-  margin: 200px auto;
+  margin: 100px auto;
 }
 .popular-tour,.perfect-section {
   margin: 0 auto;
@@ -248,14 +254,19 @@ main section {
 }
 
 /* why choose us section */
+
 .choose-us-title {
   text-align: center;
-  width: 700px;
   margin: 10px auto;
+  display: flex;
+  flex-direction: column;
 }
 .choose-us-title p {
   margin-top: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
 }
 .choose-us-card {
   display: grid;
@@ -268,11 +279,11 @@ main section {
   border-radius: 16px;
   width: 100%;
   margin: 0 auto;
-  height: 300px;
+  height: 250px;
   padding: 32px 32px 50px 32px;
 }
 .card h3 {
-  margin-top: 32px;
+  margin-top: 20px;
   margin-bottom: 16px;
 }
 #card1 {
@@ -428,7 +439,6 @@ background: rgba(19, 19, 24, 0.05);
 footer {
   background: rgba(19, 19, 24, 0.05);
   text-align: center;
-  margin: 0 auto;
 }
 .footer-container {
   width: 60%;
@@ -436,6 +446,7 @@ footer {
   margin: 0px auto;
   padding: 100px;
 }
+
 .footer-title {
   margin-bottom: 16px;
   display: flex;
@@ -461,19 +472,22 @@ footer {
   margin-top: 25px;
   gap: 20px;
   font-size: 1.5rem;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(19, 19, 24, 0.10);
 }
 .reserved {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 /* responsive devices */
 
 /* small devices */
 @media screen and (max-width: 600px) {
+ 
   header {
     width: 100%;
     margin: 0px;
-    padding: 20px;
+
   }
   .h2-title {
     font-size: 1.5rem;
@@ -484,6 +498,10 @@ footer {
   }
   .nav-icon {
     visibility: visible;
+    font-size: 1.4rem;
+  }
+  .nav{
+    gap: 25px;
   }
   .nav ul > li {
     display: none;
@@ -492,7 +510,7 @@ footer {
     font-size: 1rem;
     margin-right: 120px;
   }
-
+  
   .nav-title {
     font-size: 1.2rem;
   }
@@ -538,12 +556,13 @@ footer {
   main section {
     width: 100%;
     padding: 20px;
-    margin: 40px auto;
+    margin: 0px auto;
   }
   .popular-tour ,.perfect-section{
     width: 100%;
     flex-direction: column-reverse;
-    padding: 10px;
+    /* padding: 10px; */
+    gap: 10px;
   }
   .popular-tour-left,
   .popular-tour-right,.perfect-section-left,.perfect-section-right {
@@ -609,6 +628,7 @@ footer {
   .choose-us-title p {
     margin-top: 10px;
     margin-bottom: 16px;
+    width: 90%;
   }
   .choose-us-card {
     display: grid;
@@ -622,6 +642,10 @@ footer {
     /* width: 100%; */
 
     padding: 20px 32px;
+  }
+  .card img{
+    width: 36px;
+    height: 34px;
   }
   .card h3 {
     margin-top: 20px;
@@ -672,10 +696,15 @@ footer {
   }
   .news-letter-right img{
     width: 335px;
-height: 300px;
+  height: 300px;
+  }
+  .news-letter-right{
+    height: 100%;
+
   }
   .sale-btn{
     left: 127px;
+    bottom: 118px;
   }
   .news-letter-left form > input{
     width: 270px;
@@ -684,3 +713,192 @@ height: 300px;
     
   }
 }
+
+
+/* medium device */
+@media screen and (min-width:600px) and (max-width: 992px){
+  header {
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+
+  }
+  /* .h2-title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  } */
+  /* .p-tag {
+    font-size: 1rem;
+  } */
+  .nav-icon {
+    visibility: visible;
+    font-size: 1.4rem;
+    
+  }
+
+
+  .nav{
+    gap: 335px;
+  }
+  .nav ul > li {
+    display: none;
+  }
+  .nav-title {
+    font-size: 1rem;
+    margin-right: 120px;
+  }
+
+  .nav-title {
+    font-size: 1.2rem;
+  }
+  .description {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .banner {
+    margin: 15px 0px;
+    background-position: center;
+  }
+  .banner-content {
+    height: 100%;
+    padding: 10px;
+  }
+  .banner-content-text {
+    width: 90%;
+    margin-top: 32px;
+  }
+  .banner-title {
+    font-size: 1.5rem;
+  }
+  .banner-input form {
+    flex-direction: column;
+  }
+  .banner-input {
+    height: 60%;
+  }
+  form input,
+  select {
+    width: 255px;
+    height: 52px;
+  }
+  .banner-input form {
+    gap: 10px;
+  }
+  .description {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  /* main section */
+  main section {
+    width: 80%;
+    padding: 40px 50px;
+    /* margin: 40px auto; */
+  }
+  .popular-tour ,.perfect-section{
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+  .popular-tour-left,
+  .popular-tour-right,.perfect-section-left,.perfect-section-right {
+    width: 100%;
+  }
+  .popular-tour-right img ,.perfect-section-right video{
+    width: 100%;
+    
+  }
+
+  .footer-container {
+    padding: 15px;
+    width: 100%;
+  }
+  .footer-title {
+    width: 100%;
+  }
+  
+  .footer-title h1 {
+    font-size: 1.3rem;
+  }
+
+  .destination-container {
+    width: 100%;
+  }
+  .choose-us-title {
+    width: 100%;
+  }
+  .choose-us-title p {
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+  .choose-us-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 289px);
+  }
+  .card {
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.2);
+    background: rgba(251, 181, 99, 0.05);
+    width: 100%;
+
+    padding: 20px 32px;
+  }
+  .card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  #card1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  #card2 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  #card3 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .discount-container,
+  .discount-title {
+    width: 100%;
+  }
+  .discount-img-container {
+   width: 100%;
+   
+   height: 500px;
+   padding: 90px 10px 10px 10px;
+  }
+  .img-container-box{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .img-container{
+    margin:0px;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .discount-title *{
+    width: 100%;
+  }
+  .news-letter-container{
+    flex-direction: column;
+  }
+  .news-letter-right,.news-letter-left{
+    width: 100%;
+  }
+  
+  .sale-btn{
+    left: 420px;
+  }
+  .news-letter-left form > input{
+    /* width: 270px; */
+    height: 50px;
+    border-radius: 8px;
+    
+  }
+}
+
